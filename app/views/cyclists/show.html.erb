@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identificacion:</strong>
+  <%= @cyclist.identificacion %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cyclist.nombre %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @cyclist.usuario %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @cyclist.clave %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @cyclist.correo %>
+</p>
+
+<p>
+  <strong>Nomcontact:</strong>
+  <%= @cyclist.nomcontact %>
+</p>
+
+<p>
+  <strong>Correocontact:</strong>
+  <%= @cyclist.correocontact %>
+</p>
+
+<%= link_to 'Edit', edit_cyclist_path(@cyclist) %> |
+<%= link_to 'Back', cyclists_path %>

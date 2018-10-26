@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Security Elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Nombre</th>
+      <th>Reglamentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @security_elements.each do |security_element| %>
+      <tr>
+        <td><%= security_element.descripcion %></td>
+        <td><%= security_element.nombre %></td>
+        <td><%= security_element.reglamentario %></td>
+        <td><%= link_to 'Show', security_element %></td>
+        <td><%= link_to 'Edit', edit_security_element_path(security_element) %></td>
+        <td><%= link_to 'Destroy', security_element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Security Element', new_security_element_path %>

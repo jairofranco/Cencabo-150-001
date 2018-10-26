@@ -1,0 +1,42 @@
+<%= form_for(opinion) do |f| %>
+  <% if opinion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
+
+      <ul>
+      <% opinion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %>
+    <%= f.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.date_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo %>
+    <%= f.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :asunto %>
+    <%= f.text_field :asunto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :texto %>
+    <%= f.text_area :texto %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

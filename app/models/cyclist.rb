@@ -1,0 +1,2 @@
+class Cyclist < ApplicationRecord
+end

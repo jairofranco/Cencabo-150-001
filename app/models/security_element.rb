@@ -1,0 +1,2 @@
+class SecurityElement < ApplicationRecord
+end

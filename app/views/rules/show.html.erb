@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Articulo:</strong>
+  <%= @rule.articulo %>
+</p>
+
+<p>
+  <strong>Origen:</strong>
+  <%= @rule.origen %>
+</p>
+
+<p>
+  <strong>Capitulo:</strong>
+  <%= @rule.capitulo %>
+</p>
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>

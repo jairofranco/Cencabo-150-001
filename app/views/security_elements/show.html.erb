@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @security_element.descripcion %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @security_element.nombre %>
+</p>
+
+<p>
+  <strong>Reglamentario:</strong>
+  <%= @security_element.reglamentario %>
+</p>
+
+<%= link_to 'Edit', edit_security_element_path(@security_element) %> |
+<%= link_to 'Back', security_elements_path %>

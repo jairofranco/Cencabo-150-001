@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cyclists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identificacion</th>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Clave</th>
+      <th>Correo</th>
+      <th>Nomcontact</th>
+      <th>Correocontact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cyclists.each do |cyclist| %>
+      <tr>
+        <td><%= cyclist.identificacion %></td>
+        <td><%= cyclist.nombre %></td>
+        <td><%= cyclist.usuario %></td>
+        <td><%= cyclist.clave %></td>
+        <td><%= cyclist.correo %></td>
+        <td><%= cyclist.nomcontact %></td>
+        <td><%= cyclist.correocontact %></td>
+        <td><%= link_to 'Show', cyclist %></td>
+        <td><%= link_to 'Edit', edit_cyclist_path(cyclist) %></td>
+        <td><%= link_to 'Destroy', cyclist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cyclist', new_cyclist_path %>
